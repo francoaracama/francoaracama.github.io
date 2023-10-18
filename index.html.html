@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            font-family: "Arial", sans-serif;
+            background-image: url(imagenes/360_F_378401105_9LAka9cRxk5Ey2wwanxrLTFCN1U51DL0.jpeg);
+            background-size: cover; 
+            background-repeat: no-repeat; /
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+        }
+        img {
+            max-width: 100%;
+            width: auto; 
+            max-height: 300px;
+            }
+
+        .buttons {
+            margin-top: 20px;
+            
+        }
+        .buttons button {
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .title { 
+        font-size: 36px;
+        margin-top: 20px;
+        font-family: 'Roboto Mono', monospace;
+        }
+
+
+        
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Franco Uriel Aracama</h1>
+        <img src="imagenes/IMG_20200103_174945941.jpeg" alt="Mi Imagen">
+        <p class="time" id="current-time"></p>
+        <div class="buttons">
+            <a href="about.html"><button>About</button></a>
+            <a href="https://soundcloud.com/fu41/tracks" target="_blank"><button>Music</button></a>
+            <a href="https://www.youtube.com/@fua8001" target="_blank"><button>Youtube</button></a>
+            <button>CV</button>
+            <a href="contact.html"><button>Contact</button></a>
+        
+   
+    <script>
+
+        
+        function updateClock() {
+            const currentTime = new Date().toLocaleTimeString("es-AR", {timeZone: "America/Argentina/Buenos_Aires"});
+            document.getElementById("current-time").textContent = "Time zone in Buenos Aires (GMT-3): " + currentTime;
+        }
+
+        setInterval(updateClock, 1000);
+    </script>
+
+</body>
+</html>
